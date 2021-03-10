@@ -3,7 +3,7 @@
 The library includes flowtypes
 
 ```
-npm install @decoy9697/prioroty-queue
+npm install @decoy9697/priority-queue
 ```
 
 ```js
