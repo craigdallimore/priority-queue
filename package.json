@@ -1,5 +1,5 @@
 {
-  "version": "0.1.1",
+  "version": "0.2.0",
   "scripts": {
     "app": "babel-node index",
     "dev": "nodemon --exec babel-node index",

@@ -20,30 +20,30 @@ describe("peek", () => {
     const pq = new PQ();
     expect(pq.peek()).toBeUndefined();
   });
-  it("returns the highest priority element", () => {
+  it("returns the element paired with the lowest number", () => {
     const pq = new PQ();
     pq.insert("c", 1);
     pq.insert("b", 5);
     pq.insert("a", 10);
     pq.insert("d", 3);
     pq.insert("e", 2);
-    expect(pq.peek()).toBe("a");
+    expect(pq.peek()).toBe("c");
   });
 });
 
 describe("pop", () => {
-  it("dequeues and returns the highest element", () => {
+  it("dequeues and returns the element that was paired with the lowest number", () => {
     const pq = new PQ();
     pq.insert("c", 1);
     pq.insert("b", 5);
     pq.insert("a", 10);
     pq.insert("d", 3);
     pq.insert("e", 2);
-    expect(pq.pop()).toBe("a");
-    expect(pq.pop()).toBe("b");
-    expect(pq.pop()).toBe("d");
-    expect(pq.pop()).toBe("e");
     expect(pq.pop()).toBe("c");
+    expect(pq.pop()).toBe("e");
+    expect(pq.pop()).toBe("d");
+    expect(pq.pop()).toBe("b");
+    expect(pq.pop()).toBe("a");
     expect(pq.isEmpty()).toBe(true);
   });
   it("works with one element", () => {
@@ -62,13 +62,13 @@ describe("insert", () => {
   });
   it("adds an element at an appropriate position", () => {
     const pq = new PQ();
-    pq.insert("a", 1);
-    pq.insert("b", 10);
+    pq.insert("a", 10);
+    pq.insert("b", 1);
     pq.insert("c", 5);
     const actual = pq.peek();
     expect(actual).toBe("b");
   });
-  it("retains insert order when elements have matching priority", () => {
+  it("with the same priority, more recent inserts pop off earlier", () => {
     const pq = new PQ();
     const a = { name: "a", val: 1 };
     const b = { name: "b", val: 1 };
@@ -76,8 +76,8 @@ describe("insert", () => {
     pq.insert(a, 1);
     pq.insert(b, 1);
     pq.insert(c, 1);
-    expect(pq.pop()).toBe(a);
-    expect(pq.pop()).toBe(b);
     expect(pq.pop()).toBe(c);
+    expect(pq.pop()).toBe(b);
+    expect(pq.pop()).toBe(a);
   });
 });

@@ -4,7 +4,7 @@ function compareNumbers(n: number, m: number): 1 | 0 | -1 {
   if (n === m) {
     return 0;
   }
-  return n > m ? 1 : -1;
+  return n < m ? 1 : -1;
 }
 
 class PQ<Item> {
@@ -24,7 +24,7 @@ class PQ<Item> {
       const prevIndex = index - 1;
       const [item, ip]: [Item, number] = this.items[index];
       const [prevItem, pip]: [Item, number] = this.items[prevIndex];
-      if (compareNumbers(ip, pip) <= 0) {
+      if (compareNumbers(ip, pip) < 0) {
         break;
       }
       this.items[index] = [prevItem, pip];
