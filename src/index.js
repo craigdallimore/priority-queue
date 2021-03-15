@@ -1,5 +1,7 @@
 // @flow
 
+type Order = "LOW_FIRST" | "HIGH_FIRST";
+
 function compareNumbers(n: number, m: number): 1 | 0 | -1 {
   if (n === m) {
     return 0;
@@ -7,10 +9,15 @@ function compareNumbers(n: number, m: number): 1 | 0 | -1 {
   return n < m ? 1 : -1;
 }
 
+export const LOW_FIRST: Order = "LOW_FIRST";
+export const HIGH_FIRST: Order = "HIGH_FIRST";
+
 class PQ<Item> {
-  constructor() {
+  constructor(opts: { sort: Order }) {
+    this.opts = opts;
     this.items = [];
   }
+  opts: { sort: Order };
   items: Array<[Item, number]>;
 
   isEmpty(): boolean {
@@ -24,7 +31,10 @@ class PQ<Item> {
       const prevIndex = index - 1;
       const [item, ip]: [Item, number] = this.items[index];
       const [prevItem, pip]: [Item, number] = this.items[prevIndex];
-      if (compareNumbers(ip, pip) < 0) {
+      if (this.opts.sort === LOW_FIRST && compareNumbers(ip, pip) < 0) {
+        break;
+      }
+      if (this.opts.sort === HIGH_FIRST && compareNumbers(pip, ip) < 0) {
         break;
       }
       this.items[index] = [prevItem, pip];

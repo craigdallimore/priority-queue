@@ -7,12 +7,12 @@ npm install @decoy9697/priority-queue
 ```
 
 ```js
-import PQ from "@decoy9697/priority-queue";
+import PQ, { LOW_FIRST } from "@decoy9697/priority-queue";
 
-const pq = new PQ();
+const pq = new PQ({ sort: LOW_FIRST });
 
 // The number influences priority
-// - lower takes precedence
+// - lower takes precedence (given LOW_FIRST, otherwise use HIGH_FIRST)
 // - with equal numbers, recency of insert takes precendence
 pq.insert("🌵", 5);
 pq.insert("🌿", 10);
