@@ -3,6 +3,7 @@
   "scripts": {
     "app": "babel-node index",
     "dev": "nodemon --exec babel-node index",
+    "bench": "babel-node benchmark",
     "test": "jest",
     "prepublishOnly": "yarn run build",
     "build": "babel src/ -d lib/ && flow-copy-source src lib"
@@ -31,6 +32,7 @@
     "@babel/preset-flow": "^7.12.1",
     "babel-eslint": "^10.1.0",
     "babel-jest": "^26.6.3",
+    "benchmark": "^2.1.4",
     "eslint": "^7.17.0",
     "eslint-config-prettier": "^6.15.0",
     "eslint-plugin-flowtype": "^5.2.0",
