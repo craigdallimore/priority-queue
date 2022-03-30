@@ -1,5 +1,3 @@
-// @flow
-
 type Order = "LOW_FIRST" | "HIGH_FIRST";
 
 function compareNumbers(n: number, m: number): 1 | 0 | -1 {
