@@ -5,12 +5,19 @@
     "prepublish": "tsc",
     "build": "tsc"
   },
+  "license": "MIT",
+  "description": "A simple priority queue",
+  "repository": "@decoy9697/priority-queue",
+  "bugs": "https://github.com/@decoy9697/priority-queue/issues",
+  "keywords": [
+    "priority-queue"
+  ],
   "files": [
-    "lib"
+    "dist"
   ],
   "name": "@decoy9697/priority-queue",
   "main": "dist/index.js",
-  "types": "types/index.d.ts",
+  "types": "dist/index.d.ts",
   "dependencies": {},
   "devDependencies": {
     "@types/benchmark": "^2.1.1",
