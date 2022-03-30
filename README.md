@@ -1,5 +1,8 @@
 # Priority Queue
 
+[![Downloads][downloads-badge][downloads]]
+[![Size][size-badge][size]]
+
 ```
 npm install @decoy9697/priority-queue
 ```
@@ -29,3 +32,10 @@ pq.pop(); // undefined
 // .isEmpty() returns a boolean, true given it is empty
 pq.isEmpty(); // true
 ```
+
+<!-- Definitions -->
+
+[downloads-badge]: https://img.shields.io/npm/dm/@decoy9697/priority-queue.svg
+[downloads]: https://www.npmjs.com/package/@decoy9697/priority-queue
+[size-badge]: https://img.shields.io/bundlephobia/minzip/@decoy9697/priority-queue.svg
+[size]: https://bundlephobia.com/result?p=@decoy9697/priority-queue
