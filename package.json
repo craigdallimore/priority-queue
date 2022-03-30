@@ -2,15 +2,15 @@
   "version": "1.0.0",
   "scripts": {
     "test": "jest src",
-    "prepublishOnly": "yarn run build",
-    "build": "babel src/ -d lib/ && flow-copy-source src lib"
+    "prepublish": "tsc",
+    "build": "tsc"
   },
   "files": [
     "lib"
   ],
-  "types": "index.d.ts",
   "name": "@decoy9697/priority-queue",
-  "main": "lib/index.js",
+  "main": "dist/index.js",
+  "types": "types/index.d.ts",
   "dependencies": {},
   "devDependencies": {
     "@types/benchmark": "^2.1.1",
