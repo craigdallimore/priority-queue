@@ -1,13 +1,14 @@
-import { Suite } from "benchmark";
+import { Suite, type Event } from "benchmark";
 import PQ, { LOW_FIRST, HIGH_FIRST } from "./src/index";
 
-let pqlf, pqhf;
+let pqlf: PQ<string>;
+let pqhf: PQ<string>;
 
-function onComplete() {
+function onComplete(this: Suite) {
   console.log("Fastest is " + this.filter("fastest").map("name"));
 }
 
-function onCycle(event) {
+function onCycle(event: Event) {
   console.log(String(event.target));
 }
 

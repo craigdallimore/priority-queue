@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
   "scripts": {
-    "bench": "ts-node benchmark",
+    "bench": "ts-node -O '{\"module\":\"commonjs\"}' benchmark",
     "test": "jest src",
     "prepublishOnly": "yarn run build",
     "build": "babel src/ -d lib/ && flow-copy-source src lib"
