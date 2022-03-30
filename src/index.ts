@@ -42,11 +42,11 @@ class PQ<Item> {
     return this.items.length;
   }
 
-  pop(): ?Item {
+  pop(): Item | undefined {
     return this.items.shift()?.[0];
   }
 
-  peek(): ?Item {
+  peek(): Item | undefined {
     return this.items[0]?.[0];
   }
 }

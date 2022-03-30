@@ -1,5 +1,3 @@
-// @flow
-
 import { Suite } from "benchmark";
 import PQ, { LOW_FIRST, HIGH_FIRST } from "./src/index";
 
