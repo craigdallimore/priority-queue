@@ -1,7 +1,5 @@
 # Priority Queue
 
-The library includes flowtypes
-
 ```
 npm install @decoy9697/priority-queue
 ```
