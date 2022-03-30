@@ -1,7 +1,7 @@
 # Priority Queue
 
-[![Downloads][downloads-badge][downloads]]
-[![Size][size-badge][size]]
+[![Downloads][downloads-badge]][downloads]
+[![Size][size-badge]][size]
 
 ```
 npm install @decoy9697/priority-queue
