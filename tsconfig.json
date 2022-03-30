@@ -3,8 +3,8 @@
     "declaration": true,
     "moduleResolution": "node",
     "target": "es2016",
-    "lib": ["es6"],
-    "module": "esnext",
+    "lib": ["es6", "dom"],
+    "module": "commonjs",
     "rootDir": "src",
     "baseUrl": "src",
     "noImplicitAny": true,
@@ -13,5 +13,6 @@
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "skipLibCheck": true
-  }
+  },
+  "exclude": ["node_modules", "dist"]
 }
