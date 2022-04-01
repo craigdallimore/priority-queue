@@ -1,5 +1,5 @@
 {
-  "version": "1.0.1",
+  "version": "1.0.2",
   "scripts": {
     "test": "jest src",
     "prepublish": "tsc",
@@ -7,8 +7,11 @@
   },
   "license": "MIT",
   "description": "A simple priority queue",
-  "repository": "@decoy9697/priority-queue",
-  "bugs": "https://github.com/@decoy9697/priority-queue/issues",
+  "repository": "https://github.com/craigdallimore/priority-queue#readme",
+  "bugs": {
+    "url": "https://github.com/craigdallimore/priority-queue/issues",
+    "email": "decoy9697@gmail.com"
+  },
   "keywords": [
     "priority-queue"
   ],
