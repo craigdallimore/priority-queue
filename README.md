@@ -1,5 +1,6 @@
 # Priority Queue
 
+[![Build][build-badge]][build]
 [![Downloads][downloads-badge]][downloads]
 [![Size][size-badge]][size]
 
@@ -55,6 +56,8 @@ This project uses [nix](https://nixos.org/) to install dependencies for the deve
 
 <!-- Definitions -->
 
+[build-badge]: https://github.com/craigdallimore/priority-queue/workflows/main/badge.svg
+[build]: https://github.com/craigdallimore/priority-queue/actions
 [downloads-badge]: https://img.shields.io/npm/dm/@decoy9697/priority-queue.svg
 [downloads]: https://www.npmjs.com/package/@decoy9697/priority-queue
 [size-badge]: https://img.shields.io/bundlephobia/minzip/@decoy9697/priority-queue.svg
