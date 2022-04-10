@@ -3,7 +3,7 @@
   "scripts": {
     "test": "jest src && yarn run test-coverage",
     "test-coverage": "c8 --check-coverage --branches 100 --functions 100 --lines 100 --statements 100 --reporter lcov yarn test",
-    "prepublish": "tsc",
+    "prepublishOnly": "tsc",
     "build": "tsc"
   },
   "license": "MIT",
