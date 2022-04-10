@@ -3,9 +3,13 @@
 [![Downloads][downloads-badge]][downloads]
 [![Size][size-badge]][size]
 
+## Installation
+
 ```
 npm install @decoy9697/priority-queue
 ```
+
+## Usage
 
 ```js
 import PQ, { LOW_FIRST } from "@decoy9697/priority-queue";
@@ -32,6 +36,22 @@ pq.pop(); // undefined
 // .isEmpty() returns a boolean, true given it is empty
 pq.isEmpty(); // true
 ```
+
+## Development
+
+This project uses [nix](https://nixos.org/) to install dependencies for the development shell.
+
+### Commands
+
+`nix-shell` - starts a development shell with system dependencies
+
+#### Within the shell
+
+`yarn` - install project dependencies
+
+`yarn test` - run the tests
+
+`npx eslint` - run the linter
 
 <!-- Definitions -->
 
