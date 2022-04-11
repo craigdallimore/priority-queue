@@ -55,7 +55,7 @@ This project uses [nix](https://nixos.org/) to install dependencies for the deve
 
 `yarn bench` - run benchmarkjs
 
-`npx eslint` - run the linter
+`yarn format` - run the linter
 
 <!-- Definitions -->
 
