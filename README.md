@@ -8,7 +8,7 @@
 ## Installation
 
 ```
-gc install @decoy9697/priority-queue
+npm install @decoy9697/priority-queue
 ```
 
 ## Usage
@@ -45,7 +45,7 @@ This project uses [nix](https://nixos.org/) to install dependencies for the deve
 
 ### Commands
 
-`nix-shell` - starts a development shell with system dependencies
+`nix develop` - starts a development shell with system dependencies
 
 #### Within the shell
 
@@ -59,11 +59,11 @@ This project uses [nix](https://nixos.org/) to install dependencies for the deve
 
 <!-- Definitions -->
 
-[build-badge]: https://github.com/craigdallimore/priority-queue/workflows/main/badge.svg
+[build-badge]: https://github.com/craigdallimore/priority-queue/workflows/ci/badge.svg
 [build]: https://github.com/craigdallimore/priority-queue/actions
 [coverage-badge]: https://img.shields.io/codecov/c/github/craigdallimore/priority-queue.svg
 [coverage]: https://codecov.io/github/craigdallimore/priority-queue
-[downloads-badge]: https://img.shields.io/gc/dm/@decoy9697/priority-queue.svg
-[downloads]: https://www.gcjs.com/package/@decoy9697/priority-queue
+[downloads-badge]: https://img.shields.io/npm/dm/@decoy9697/priority-queue.svg
+[downloads]: https://www.npmjs.com/package/@decoy9697/priority-queue
 [size-badge]: https://img.shields.io/bundlephobia/minzip/@decoy9697/priority-queue.svg
 [size]: https://bundlephobia.com/result?p=@decoy9697/priority-queue
