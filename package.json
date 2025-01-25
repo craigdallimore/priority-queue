@@ -6,8 +6,9 @@
     "format": "xo --fix",
     "test": "vitest run src && npm run format && npm run test-coverage",
     "test-coverage": "c8 --check-coverage --branches 100 --functions 100 --lines 100 --statements 100 --reporter lcov vitest src",
-    "prepublishOnly": "npm test && tsc",
+    "prepublishOnly": "npm run ci",
     "check-exports": "attw --pack . --ignore-rules=cjs-resolves-to-esm",
+    "local-release": "changeset version && changeset publish",
     "build": "tsc"
   },
   "license": "MIT",
@@ -40,6 +41,7 @@
   },
   "devDependencies": {
     "@arethetypeswrong/cli": "^0.17.3",
+    "@changesets/cli": "^2.27.12",
     "@types/benchmark": "^2.1.1",
     "@types/jest": "^29.5.14",
     "@types/node": "^22.10.10",
