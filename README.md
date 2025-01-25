@@ -59,7 +59,7 @@ This project uses [nix](https://nixos.org/) to install dependencies for the deve
 
 <!-- Definitions -->
 
-[build-badge]: https://github.com/craigdallimore/priority-queue/workflows/ci/badge.svg
+[build-badge]: https://github.com/craigdallimore/priority-queue/workflows/main.yml/badge.svg
 [build]: https://github.com/craigdallimore/priority-queue/actions
 [coverage-badge]: https://img.shields.io/codecov/c/github/craigdallimore/priority-queue.svg
 [coverage]: https://codecov.io/github/craigdallimore/priority-queue
