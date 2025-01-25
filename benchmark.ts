@@ -1,5 +1,5 @@
 import {Suite, type Event} from 'benchmark';
-import PQ, {LOW_FIRST, HIGH_FIRST} from './src/index';
+import PQ, {LOW_FIRST, HIGH_FIRST} from './src/index.js';
 
 let pqlf: PQ<string>;
 let pqhf: PQ<string>;

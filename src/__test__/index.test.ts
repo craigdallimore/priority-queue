@@ -1,6 +1,6 @@
 // Tests adapted from https://github.com/janogonzalez/priorityqueuejs/blob/master/test/priorityqueue.js
 
-import PQ, {LOW_FIRST, HIGH_FIRST} from '../index';
+import PQ, {LOW_FIRST, HIGH_FIRST} from '../index.js';
 
 describe('isEmpty', () => {
   it('returns true when the queue is empty', () => {
