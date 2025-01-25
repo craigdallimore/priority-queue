@@ -1,5 +1,5 @@
 // Tests adapted from https://github.com/janogonzalez/priorityqueuejs/blob/master/test/priorityqueue.js
-
+import {describe, it, expect} from 'vitest';
 import PQ, {LOW_FIRST, HIGH_FIRST} from '../index.js';
 
 describe('isEmpty', () => {
