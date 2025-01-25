@@ -36,8 +36,8 @@ class PQ<Item> {
         break;
       }
 
-      const [item, priority]: [Item, number] = currentPair;
-      const [previousItem, previousPriority]: [Item, number] = previousPair;
+      const [item, priority] = currentPair;
+      const [previousItem, previousPriority] = previousPair;
 
       if (this.opts.sort === LOW_FIRST && compareNumbers(priority, previousPriority) < 0) {
         break;
@@ -55,11 +55,11 @@ class PQ<Item> {
     return this.items.length;
   }
 
-  pop(): Item | undefined {
+  pop() {
     return this.items.shift()?.[0];
   }
 
-  peek(): Item | undefined {
+  peek() {
     return this.items[0]?.[0];
   }
 }
