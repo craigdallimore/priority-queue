@@ -29,18 +29,26 @@ class PQ<Item> {
     let index = newLength - 1;
     while (index > 0) {
       const previousIndex = index - 1;
-      const [item, ip]: [Item, number] = this.items[index];
-      const [previousItem, pip]: [Item, number] = this.items[previousIndex];
-      if (this.opts.sort === LOW_FIRST && compareNumbers(ip, pip) < 0) {
+      const currentPair = this.items[index];
+      const previousPair = this.items[previousIndex];
+
+      if (!currentPair || !previousPair) {
         break;
       }
 
-      if (this.opts.sort === HIGH_FIRST && compareNumbers(pip, ip) < 0) {
+      const [item, priority]: [Item, number] = currentPair;
+      const [previousItem, previousPriority]: [Item, number] = previousPair;
+
+      if (this.opts.sort === LOW_FIRST && compareNumbers(priority, previousPriority) < 0) {
         break;
       }
 
-      this.items[index] = [previousItem, pip];
-      this.items[previousIndex] = [item, ip];
+      if (this.opts.sort === HIGH_FIRST && compareNumbers(previousPriority, priority) < 0) {
+        break;
+      }
+
+      this.items[index] = [previousItem, previousPriority];
+      this.items[previousIndex] = [item, priority];
       index = previousIndex;
     }
 
