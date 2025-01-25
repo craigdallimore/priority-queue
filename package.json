@@ -1,11 +1,13 @@
 {
   "version": "1.0.2",
   "scripts": {
+    "ci": "npm run build && npm run test && npm run check-exports",
     "bench": "ts-node -O '{\"module\":\"commonjs\"}' benchmark",
     "format": "xo --fix",
-    "test": "vitest src && npm format && npm run test-coverage",
-    "test-coverage": "c8 --check-coverage --branches 100 --functions 100 --lines 100 --statements 100 --reporter lcov jest src",
+    "test": "vitest run src && npm run format && npm run test-coverage",
+    "test-coverage": "c8 --check-coverage --branches 100 --functions 100 --lines 100 --statements 100 --reporter lcov vitest src",
     "prepublishOnly": "npm test && tsc",
+    "check-exports": "attw --pack . --ignore-rules=cjs-resolves-to-esm",
     "build": "tsc"
   },
   "license": "MIT",
@@ -23,6 +25,7 @@
   ],
   "type": "module",
   "name": "@decoy9697/priority-queue",
+  "main": "dist/index.js",
   "xo": {
     "prettier": true,
     "rules": {
@@ -36,6 +39,7 @@
     "useTabs": false
   },
   "devDependencies": {
+    "@arethetypeswrong/cli": "^0.17.3",
     "@types/benchmark": "^2.1.1",
     "@types/jest": "^29.5.14",
     "@types/node": "^22.10.10",
