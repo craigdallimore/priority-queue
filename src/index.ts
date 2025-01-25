@@ -39,11 +39,17 @@ class PQ<Item> {
       const [item, priority] = currentPair;
       const [previousItem, previousPriority] = previousPair;
 
-      if (this.opts.sort === LOW_FIRST && compareNumbers(priority, previousPriority) < 0) {
+      if (
+        this.opts.sort === LOW_FIRST &&
+        compareNumbers(priority, previousPriority) < 0
+      ) {
         break;
       }
 
-      if (this.opts.sort === HIGH_FIRST && compareNumbers(previousPriority, priority) < 0) {
+      if (
+        this.opts.sort === HIGH_FIRST &&
+        compareNumbers(previousPriority, priority) < 0
+      ) {
         break;
       }
 
